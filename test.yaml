@@ -1,0 +1,15 @@
+name: Alice Watson
+age: 22
+active: true
+list:
+    - item1
+    - item2
+    - item3
+    - item4
+description: >
+    This is a multiline description about Alice Watson
+    Newlines are not preserved here!!
+skills: |
+    Python
+    Go
+    Rust
