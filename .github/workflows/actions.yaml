@@ -6,22 +6,24 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: Print Env
+        run: env
       - name: List Files Before Checkout
         run: |
           date
           pwd
-          ls -alrth
+          ls -lrth
       - name: Checkout 
         uses: actions/checkout@v4.1.7
       - name: List Files After Checkout
         run: |
           date
           pwd
-          ls -alrth
-      - name: Simple Javascript Action
-        id: greet
-        uses: actions/hello-world-javascript-action@v1.1
-        with:
-          who-to-greet: Joe Goldberg
-      - name: Log Greeting Time
-        run: echo "${{ steps.greet.outputs.time }}"
+          ls -lrth
+      # - name: Simple Javascript Action
+      #   id: greet
+      #   uses: actions/hello-world-javascript-action@v1.1
+      #   with:
+      #     who-to-greet: Joe Goldberg
+      # - name: Log Greeting Time
+      #   run: echo "${{ steps.greet.outputs.time }}"
